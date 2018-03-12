@@ -1,1 +1,2 @@
 # NFA017
+Le but de ce cours étant d'apprendre à dynamiser un site statique. Autrement dit, de passer d'une "programmation" HTML/CSS en une véritable programmation PHP qui produira, seule, du HTML pour rendre en quelque sorte unique chaque page affichée sur le navigateur web.
