@@ -6,8 +6,7 @@ if(!empty($_POST['nom']) AND !empty($_POST['prenom']) AND
 	extract($_POST);
 
 	echo "Bienvenue $prenom <b>$nom</b>.<br>";
-	echo utf8_encode("Nous avons bien noté que vous habitez :$adresse $ville ($code)."); 
+	echo utf8_encode("Nous avons bien notï¿½ que vous habitez :$adresse $ville ($code)."); 
 }
 
 ?>
-
