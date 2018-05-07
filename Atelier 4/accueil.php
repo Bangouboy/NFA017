@@ -4,13 +4,12 @@ extract($_SESSION);
     
 if(isset($username)){
     echo "Bienvenue ".$username. "<br></br>";
-    echo "Pour accéder à vos identifiants cliquez <a href='identifiant.php>ici</a><br></br>";
+    echo "Pour accéder à vos identifiants cliquez <a href='identifiant.php'>ici</a><br></br>";
     tracelog();
     nbreVisite();
     echo "Si vous souhaitez partir cliquez sur <a href='logout.php'> déconnexion</a>";
-} else {
+} else
     header("location:login.php");
-}
 
 function tracelog(){
     $nom="log.txt";
@@ -24,10 +23,13 @@ function tracelog(){
 
 function nbreVisite(){
     if(isset($_COOKIE["nb_visites"])) {
-        $nbVisites=$_COOKIE["nb_visites"]+1;
+        $nbVisite=$_COOKIE["nb_visites"]+1;
     }
-    else $nbVisites=1;
-    setCookie("nb_visites",$nbVisites);
-    echo "C'est la ".$nbVisites."<sup>ème</sup> fois que vous nous rendez visite !<br></br>";
+    else $nbVisite=1;
+    setCookie("nb_visites",$nbVisite);
+    if("nb_visites"==1) {
+        echo "C'est la ".$nbVisite."<sup>ère</sup> fois que vous nous rendez visite !<br></br>";
+    }else 
+        echo "C'est la ".$nbVisite."<sup>ème</sup> fois que vous nous rendez visite !<br></br>";
     }
 ?>
