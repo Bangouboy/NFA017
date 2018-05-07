@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<link rel="stylesheet" type="text/css" href="style.css"/>
 <title>Login</title>
 </head>
 <body>
@@ -13,19 +13,16 @@
 			</legend>
 			<table>
 				<tr>
-					<td>
-						<input type="text" name="username" placeholder="username" required />
-					</td>
+					<td>Username :</td>
+					<td><input type="text" name="username"/></td>
 				</tr>
 				<tr>
-					<td>
-						<input type="text" name="password" placeholder="password" required />
-					</td>
+					<td>Password :</td>
+					<td><input type="text" name="password"/></td>
 				</tr>
 				<tr>
-					<td>
-						<input type="submit" value="LOGIN" />
-					</td>
+					<td></td>
+					<td><input type="submit" name="commit" value="LOGIN" /></td>
 				</tr>
 			</table>
 		</fieldset>
@@ -38,15 +35,15 @@
 
  extract($_POST);
  
- if (!empty ('username') && !empty ('password')){
-     if ($username == admin && $password == admin123){
-         header('Location:accueil.php'); 
-     } else {
-             echo "login ou mot de passe invalide";
-     }
-    echo "veuillez renseigner les champs";
- }
+ if (isset($commit)){
  
+ if ($username == 'admin' && $password == 'admin123') {
+     $_SESSION['username'] = $username;
+     $_SESSION['password'] = sha1($password);
+     header('location:accueil.php');
+ }
+ else {
+     echo "<br><span>login ou mot de passe invalide</span></br>";
+ }
+ }
 ?>
-    
-    

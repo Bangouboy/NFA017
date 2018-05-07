@@ -1,0 +1,10 @@
+/* donner du style */
+html {
+	font-style: Arial;
+}
+span {
+	color: red;
+}
+.bienvenue {
+	border: 3px solid black;
+}
