@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Formulaire de contact</title>
+	</head>
+	
+	<body>
+		<form method="post" action="mail.php">
+		<fieldset><legend>Formulaire de contact</legend>
+			<table>
+				<tr><td>Nom</td>
+					<td><input name="nom" type="text" autofocus/></td>
+				</tr>
+				<tr><td>Adresse mail</td>
+					<td><input name="mail" type="email"/></td>
+				</tr>
+				<tr><td>Sujet</td>
+					<td><input name="sujet" type="text"/></td>
+				</tr>
+				<tr><td>Message</td>
+					<td><textarea name="message" rows=4></textarea></td>
+				</tr>
+				<tr><td></td>
+					<td><input type="submit" value="Envoyer"/></td>
+				</tr>
+			</table>
+		</fieldset>
+		</form>
+	</body>
+</html>
